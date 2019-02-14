@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="src/quest/quest.css">
     <title>Quests!</title>
 </head>
 <body>
     <header>
         <h1>Welcome to Quests</h1>
+        <div id="current-user"></div>
+        <div id="user-image"></div>
     </header>
-    <main></main>
+    <main>
+        <form id="choice-form">
+            <h2 id="quest-title"></h2>
+            <p id="quest-image"></p>
+            <p id="quest-description"></p>
+            
+
+            <fieldset id="quest-choices">
+                <legend>choose your action:</legend>
+            </fieldset>
+            <button>SEE WHAT HAPPENS</button>
+        </form>
+    </main>
     <footer></footer>
-    
+    <script type="module" src="src/quest/quest.js"></script>
 </body>
 </html>

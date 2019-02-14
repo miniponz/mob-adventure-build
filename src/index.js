@@ -1,4 +1,16 @@
 const userForm = document.getElementById('user-form');
+const avatarDisplay = document.getElementById('avatar-display');
+
+const avatars = ['mermaid', 'warrior', 'wizard']
+
+
+
+
+
+
+
+
+
 
 userForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -11,6 +23,7 @@ userForm.addEventListener('submit', function(event) {
         hp: 0,
         gold: 0
     };
+
     const serialize = JSON.stringify(userInfo);
     window.localStorage.setItem('userInfo', serialize);
    
