@@ -1,0 +1,46 @@
+body {
+    background-color: #ECEBE4;
+    color: #4D5C60;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
+}
+
+a:link {
+    color: #60ADB2;
+}
+
+a:visited {
+    color: #53969B;
+}
+
+a:hover {
+    color: #B71500;
+}
+
+a:active {
+    color: #B71500;
+}
+
+
+#name-wrapper {
+    width: 600px;
+    margin: auto;
+}
+
+fieldset {
+    padding: 15px;
+    margin: 50px;
+}
+
+legend {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.5em;
+}

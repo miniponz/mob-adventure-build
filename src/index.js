@@ -1,7 +1,7 @@
 const userForm = document.getElementById('user-form');
-const avatarDisplay = document.getElementById('avatar-display');
+//const avatarDisplay = document.getElementById('avatar-display');
 
-const avatars = ['mermaid', 'warrior', 'wizard']
+//const avatars = ['mermaid', 'warrior', 'wizard']
 
 
 

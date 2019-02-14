@@ -1,0 +1,9 @@
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#map-image {
+    width: 500px;
+}
