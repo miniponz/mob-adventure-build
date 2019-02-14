@@ -5,13 +5,6 @@ const userForm = document.getElementById('user-form');
 
 
 
-
-
-
-
-
-
-
 userForm.addEventListener('submit', function(event) {
     event.preventDefault();
 

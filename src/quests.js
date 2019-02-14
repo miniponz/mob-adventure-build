@@ -7,19 +7,22 @@ const bladeRunnerDescription = 'You are trudging through a desolate snowscape tr
 const bladeChoice1 = {
     label: 'run away screaming.',
     hp: -100,
-    gold: 0
+    gold: 0,
+    value: 'bladeChoice1'
 };
 
 const bladeChoice2 = {
     label: 'Wait for Ryan Gosling to take off his shirt and offer it to you for warmth.',
     hp: 100,
-    gold: 100
+    gold: 100,
+    value: 'bladeChoice2'
 };
 
 const bladeChoice3 = {
     label: 'Ask him to help you build a snow cave to wait out the night.',
     hp: -5,
-    gold: 0
+    gold: 0,
+    value: 'bladeChoice3'
 };
 
 const bladeChoices = [bladeChoice1, bladeChoice2, bladeChoice3];
@@ -29,19 +32,22 @@ const bladeChoices = [bladeChoice1, bladeChoice2, bladeChoice3];
 const caveChoice1 = {
     label: 'Run full speed ahead into the cave',
     hp: -5,
-    gold: 20
+    gold: 20,
+    value: 'caveChoice1'
 };
 
 const caveChoice2 = {
     label: 'Nope, right out of there',
     hp: -25,
-    gold: 0
+    gold: 0,
+    value: 'caveChoice2'
 };
 
 const caveChoice3 = {
     label: 'Tiptoe in a few feet, and yell “helllo??”',
     hp: 5,
-    gold: 50
+    gold: 50,
+    value: 'caveChoice3'
 };
 
 const caveChoices = [caveChoice1, caveChoice2, caveChoice3];
@@ -52,19 +58,22 @@ const caveChoices = [caveChoice1, caveChoice2, caveChoice3];
 const underwaterChoice1 = {
     label: 'try to attack the Kraken with a submarine equipped with torpedoes?',
     hp: 0,
-    gold: -25
+    gold: -25,
+    value: 'underwaterChoice1'
 };
 
 const underwaterChoice2 = {
     label: 'try to attack the Kraken with just your scuba suit and a harpoooon!',
     hp: -25,
-    gold: 0
+    gold: 0,
+    value: 'underwaterChoice2'
 };
 
 const underwaterChoice3 = {
     label: 'ask the Kraken if you can borrow a cup of sugar',
     hp: 25,
-    gold: 25
+    gold: 25,
+    value: 'underwaterChoice3'
 };
 
 const underwaterChoices = [underwaterChoice1, underwaterChoice2, underwaterChoice3];

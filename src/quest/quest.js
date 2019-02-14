@@ -6,6 +6,7 @@ const questTitle = document.getElementById('quest-title');
 const questImage = document.getElementById('quest-image');
 const questDescription = document.getElementById('quest-description');
 const questChoices = document.getElementById('quest-choices');
+const choiceForm = document.getElementById('choice-form');
 
 questTitle.textContent = questToFind.title;
 
@@ -31,15 +32,20 @@ for(let i = 0; i < questNames.length; i++) {
             label.textContent = choice.label;
 
             input.type = 'radio';
-
-
+            input.name = 'option';
+            input.value = choice.value;
         }
-
-
 
 
     }
 }
 
+choiceForm.addEventListener('submit', function(event){
+    event.preventDefault();
 
-console.log(questNames);
+    const formData = new FormData(choiceForm);
+
+    let adventureChoice = formData.get('option');
+
+    console.log(adventureChoice);
+});
