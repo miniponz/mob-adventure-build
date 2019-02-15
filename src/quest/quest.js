@@ -1,3 +1,6 @@
+import bladeChoices from './blade-choices.js';
+import caveChoices from './cave-choices.js';
+import underwaterChoices from './underwater-choices.js';
 import questNames from '../quests.js';
 
 const searchParams = new URLSearchParams(window.location.search);
@@ -35,10 +38,11 @@ for(let i = 0; i < questNames.length; i++) {
             input.name = 'option';
             input.value = choice.value;
         }
-
     }
 }
 
+const jsonString = window.localStorage.getItem('userInfo');
+const userInfo = JSON.parse(jsonString);
 
 choiceForm.addEventListener('submit', function(event){
     event.preventDefault();
@@ -46,6 +50,27 @@ choiceForm.addEventListener('submit', function(event){
     const formData = new FormData(choiceForm);
     const questDecision = formData.get('option');
 
-    console.log(questDecision);
-    
+    let selected = null;
+    if(questDecision.includes('underwater')) {
+        selected = underwaterChoices;
+    }
+    if(questDecision.includes('blade')) {
+        selected = bladeChoices;
+    }
+    if(questDecision.includes('cave')) {
+        selected = caveChoices;
+    }
+
+    for(let i = 0; i < selected.length; i++){ 
+        let currentDecision = selected[i];
+
+        if(questDecision === currentDecision.value) {
+            userInfo.hp += currentDecision.hp;
+            userInfo.gold += currentDecision.gold;
+            const serialize = JSON.stringify(userInfo);
+            window.localStorage.setItem('userInfo', serialize);
+        }
+
+    }
+    window.location = 'map.html';
 });
