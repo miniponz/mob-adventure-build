@@ -1,9 +1,6 @@
 import questNames from '../quests.js';
-
-
+import populateUser from '../user-profile.js';
 const questList = document.getElementById('quests-list');
-
-
 
 for(let i = 0; i < questNames.length; i++) {
     const currentQuest = questNames[i];
@@ -15,3 +12,5 @@ for(let i = 0; i < questNames.length; i++) {
     questLink.href = 'quests.html?id=' + encodeURIComponent(currentQuest.id);
 }
 
+
+populateUser();

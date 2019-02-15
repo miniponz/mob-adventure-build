@@ -2,6 +2,8 @@ import bladeChoices from './blade-choices.js';
 import caveChoices from './cave-choices.js';
 import underwaterChoices from './underwater-choices.js';
 import questNames from '../quests.js';
+import populateUser from '../user-profile.js';
+populateUser();
 
 const searchParams = new URLSearchParams(window.location.search);
 const questToFind = searchParams.get('id');
