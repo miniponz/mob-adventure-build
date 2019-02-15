@@ -78,7 +78,6 @@ const underwaterChoice3 = {
 
 const underwaterChoices = [underwaterChoice1, underwaterChoice2, underwaterChoice3];
 
-console.log(underwaterChoices);
 
 // quest objects
 const underwater = {

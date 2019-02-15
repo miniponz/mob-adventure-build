@@ -36,16 +36,16 @@ for(let i = 0; i < questNames.length; i++) {
             input.value = choice.value;
         }
 
-
     }
 }
+
 
 choiceForm.addEventListener('submit', function(event){
     event.preventDefault();
 
     const formData = new FormData(choiceForm);
+    const questDecision = formData.get('option');
 
-    let adventureChoice = formData.get('option');
-
-    console.log(adventureChoice);
+    console.log(questDecision);
+    
 });
