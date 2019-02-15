@@ -13,5 +13,4 @@ for(let i = 0; i < questNames.length; i++) {
     questLink.href = 'quests.html?id=' + encodeURIComponent(currentQuest.id);
 }
 
-
 populateUser();
