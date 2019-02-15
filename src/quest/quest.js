@@ -1,9 +1,11 @@
 import bladeChoices from './blade-choices.js';
 import caveChoices from './cave-choices.js';
 import underwaterChoices from './underwater-choices.js';
-import questNames from '../quests.js';
 import populateUser from '../user-profile.js';
 populateUser();
+
+const questString = window.localStorage.getItem('questNames');
+const questNames = JSON.parse(questString);
 
 const searchParams = new URLSearchParams(window.location.search);
 const questToFind = searchParams.get('id');
@@ -46,6 +48,8 @@ for(let i = 0; i < questNames.length; i++) {
 const jsonString = window.localStorage.getItem('userInfo');
 const userInfo = JSON.parse(jsonString);
 
+
+
 choiceForm.addEventListener('submit', function(event){
     event.preventDefault();
 
@@ -74,5 +78,15 @@ choiceForm.addEventListener('submit', function(event){
         }
 
     }
+    let removeIndex = questNames.map(function(item) {
+        return item.id; }).indexOf(questToFind);
+
+    questNames.splice(removeIndex, 1);
+    console.log(questNames);
+
+    const stringify = JSON.stringify(questNames);
+    window.localStorage.setItem('questNames', stringify);
+
     window.location = 'map.html';
 });
+

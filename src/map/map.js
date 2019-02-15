@@ -1,4 +1,5 @@
-import questNames from '../quests.js';
+const questString = window.localStorage.getItem('questNames');
+const questNames = JSON.parse(questString);
 import populateUser from '../user-profile.js';
 const questList = document.getElementById('quests-list');
 
