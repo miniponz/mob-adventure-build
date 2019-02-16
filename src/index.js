@@ -2,7 +2,9 @@ const userForm = document.getElementById('user-form');
 //const avatarDisplay = document.getElementById('avatar-display');
 
 //const avatars = ['mermaid', 'warrior', 'wizard']
+import questNames from './quests.js';
 
+console.log(questNames);
 
 
 userForm.addEventListener('submit', function(event) {
@@ -19,6 +21,9 @@ userForm.addEventListener('submit', function(event) {
 
     const serialize = JSON.stringify(userInfo);
     window.localStorage.setItem('userInfo', serialize);
+
+    const serializeQuest = JSON.stringify(questNames);
+    window.localStorage.setItem('questNames', serializeQuest);
    
     window.location = 'map.html';
 

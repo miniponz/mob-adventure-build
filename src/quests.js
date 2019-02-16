@@ -39,8 +39,7 @@ const bladeRunner = {
 
 const questNames = [underwater, cave, bladeRunner];
 
-const stringify = JSON.stringify(questNames);
-window.localStorage.setItem('questNames', stringify);
+
 
 export default questNames;
  
