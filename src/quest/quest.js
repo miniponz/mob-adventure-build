@@ -14,6 +14,7 @@ const questImage = document.getElementById('quest-image');
 const questDescription = document.getElementById('quest-description');
 const questChoices = document.getElementById('quest-choices');
 const choiceForm = document.getElementById('choice-form');
+const updatedStats = document.getElementById('updated-stats');
 
 questTitle.textContent = questToFind.title;
 
@@ -87,6 +88,8 @@ choiceForm.addEventListener('submit', function(event){
     const stringify = JSON.stringify(questNames);
     window.localStorage.setItem('questNames', stringify);
 
-    window.location = 'map.html';
+    updatedStats.textContent = 'Interesting Choice: here are your updated stats:';
+
+    //window.location = 'map.html';
 });
 
