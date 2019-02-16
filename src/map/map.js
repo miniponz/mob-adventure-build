@@ -16,5 +16,5 @@ for(let i = 0; i < questNames.length; i++) {
 populateUser();
 
 if(questNames.length === 0) {
-    window.location = 'index.html';
+    window.location = 'result.html';
 }

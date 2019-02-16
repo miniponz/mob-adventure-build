@@ -16,7 +16,7 @@ function populateUser(){
 
 export default populateUser;
 
-const jsonUser = window.localStorage.getItem('userInfo');
+/*const jsonUser = window.localStorage.getItem('userInfo');
 const userInfo = JSON.parse(jsonUser);
 const userInfoArray = Object.keys(userInfo).map(function(key) {
     return [String(key), String(userInfo[key])];
@@ -34,6 +34,6 @@ for(let i = 0; i < userInfoArray.length; i++) {
     currentUser.appendChild(p);
     p.textContent = userProperty;
 
-}
+}*/
 
 
